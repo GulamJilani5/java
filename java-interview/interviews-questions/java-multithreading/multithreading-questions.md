@@ -1,17 +1,17 @@
-🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
+⏺️ ➡️ 🟦 🔵🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-## ➡️ 1. Explain Thread vs Runnable, and synchronization in Java.
+# ⏺️ Concurrency / Multithreading
 
-- Also Find Somehting `D:\Jilani\learning\java-fundamentals\multithreading\basics.md`
+## ➡️ ExecutorService
 
-## ➡️ 2. what is fetch type(lazy vs eager)
+## ➡️ ThreadPool
 
-## ➡️ 3. callable vs future
+## ➡️ Locks
 
-## ➡️ 4. what is volatile
+## ➡️ volatile
 
-## ➡️ 5. What is the difference between wait() and sleep()?
+## ➡️ synchronized
 
-wait(): Releases the lock, used in inter-thread communication, defined in Object class.
+## ➡️ CompletableFuture
 
-sleep(): Doesn't release the lock, just pauses the thread, defined in Thread class.
+## ➡️ Virtual Thread

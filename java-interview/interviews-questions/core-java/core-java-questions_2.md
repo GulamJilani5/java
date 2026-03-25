@@ -1,17 +1,25 @@
-🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
+⏺️ ➡️ 🟦 🔵🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-## ➡️ Can we make a constructor final, static, or abstract? Why/Why not?
+## ➡️ Versions
 
-## ➡️ Difference between Composition vs Aggregation
+##### 🟦 Java 8
 
-## ➡️ Shallow Copy vs Deep Copy - with examples
+- Why does Java 8 allow only a single abstract method in functional interfaces?
+- Difference between abstract class and interface in Java.
+- Optional class
+  - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8\optional-class.md`
 
-## ➡️ What is Serialization/Deserialization? Methods to serialize?
+##### 🟦 Java 17
 
-## ➡️ Why does Java 8 allow only a single abstract method in functional interfaces?
+- Find Answer `D:\Jilani\learning\java-fundamentals\javaVersions\java17.md`
 
-## ➡️ Can we use private or protected for class declarations? Why/why not?
+- Sealed Class
+  - - Find Asnwer `D:\Jilani\learning\java-fundamentals\javaVersions\java17.md`
+- What is record
+  - - Find Asnwer `D:\Jilani\learning\java-fundamentals\javaVersions\java16.md`
 
-## ➡️ 7. Difference between abstract class and interface in Java.
+##### 🟦 java 21
 
-## ➡️ Can static methods be overridden in Java?
+- Find `D:\Jilani\learning\java-fundamentals\javaVersions\java21.md`
+
+##### 🟦 java 25
