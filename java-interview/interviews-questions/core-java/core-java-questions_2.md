@@ -6,8 +6,6 @@
 
 - Why does Java 8 allow only a single abstract method in functional interfaces?
 - Difference between abstract class and interface in Java.
-- Optional class
-  - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8\optional-class.md`
 
 ##### 🟦 Java 17
 

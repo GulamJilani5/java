@@ -47,7 +47,7 @@
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-basics\string\string-types-and-method.md`
 
-#### 🟦 2. Explain String immutability. Why are String objects immutable?
+#### 🟦 Explain String immutability. Why are String objects immutable?
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_4.md`
 
