@@ -10,43 +10,24 @@
 
 - Find `java-basics/oop`
 
-##### 🔵
+##### 🔵 Array
+
+- Find `D:\Jilani\learning\java-fundamentals\java-basics\array`
+
+##### 🔵 String
+
+- Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_1.md`
+- Find `D:\Jilani\learning\java-fundamentals\java-basics\string`
+
+##### 🔵 Character
+
+- Find `java-basics/character`
 
 ### 🟦 Interview
 
 ##### 🔵 Java Basics, Immutability/String
 
 - Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_1.md`
-
-## ➡️ Java Versions
-
-### 🟦 Concepts
-
-##### 🔵 java 8
-
-- Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8`
-- Find `D:\Jilani\learning\java-fundamentals\lambdaStream`
-- Optional class
-  - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8\optional-class.md`
-- Basic Concepts
-  - Find `javaVersions/java8/java-8-concepts.md`
-  - Find `D:\Jilani\learning\java-fundamentals\lambdaStream\lambda_1.md`
-
-##### 🔵 java 17
-
-- Find ``
-
-##### 🔵 java 21
-
-- Find ``
-
-##### 🔵 java 25
-
-- Find ``
-
-### 🟦 Interview
-
-- Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_2.md`
 
 ## ➡️ Exception Handling
 
@@ -112,7 +93,6 @@
 
 ##### 🔵 Stream Creation / Stream Conversion
 
-- Find `D:\Jilani\learning\java-fundamentals\lambdaStream\stream\stream-creation.md`
 - Find `https://github.com/GulamJilani5/dsa/tree/main/streams/stream-operations/stream-conversions`
 
 ##### 🔵 Intermediate Operations
@@ -154,6 +134,36 @@
 ### 🟦 Interview
 
 - Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\java-stream`
+
+## ➡️ Java Versions
+
+### 🟦 Concepts
+
+##### 🔵 java 8
+
+- Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8`
+- Find `D:\Jilani\learning\java-fundamentals\lambdaStream`
+- Optional class
+  - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8\optional-class.md`
+- Basic Concepts
+  - Find `javaVersions/java8/java-8-concepts.md`
+  - Find `D:\Jilani\learning\java-fundamentals\lambdaStream\lambda_1.md`
+
+##### 🔵 java 17
+
+- Find ``
+
+##### 🔵 java 21
+
+- Find ``
+
+##### 🔵 java 25
+
+- Find ``
+
+### 🟦 Interview
+
+- Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_2.md`
 
 ## ➡️ Spring Framework
 
