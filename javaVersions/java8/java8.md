@@ -8,11 +8,11 @@
 
 ## ➡️ Stream API:
 
-- `D:\Jilani\learning\java-fundamentals\lambdaStream\stream`
+- Find `D:\Jilani\learning\java-fundamentals\interview-questions.md`
 
 ## ➡️ Default Methods in Interfaces:
 
-## ➡️ Method References:
+- Find `D:\Jilani\learning\java-fundamentals\lambdaStream\lambda_2.md`
 
 ## ➡️ Date and Time API
 
