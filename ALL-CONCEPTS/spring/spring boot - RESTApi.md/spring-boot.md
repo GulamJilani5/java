@@ -60,3 +60,15 @@
 ### 🟦 Interview
 
 - Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\testing`
+
+##### 🔵 What is Spring Proxy and difference between JDK dynamic proxy & CGLIB proxy?
+
+1. What is Spring Boot Auto-configuration? How does it work internally, and how do you customize it using @ConditionalOnProperty or @AutoConfigureBefore?
+
+2. Difference between @Component, @Service, @Repository - Are they functionally different or just semantic?
+
+3.
+
+4. How does Spring Boot Actuator help in production monitoring? Explain /health, /metrics, and custom endpoints.
+
+5. How do you build custom Spring Boot starters? Walk through the folder structure and auto-configuration setup.
