@@ -38,10 +38,9 @@ public class UserService {
 
 - The root cause was the use of `@Transactional` on a read-only query.
 
-### ➡️ Why Did This Slow Things Down?
+##### 🟦 Why Did This Slow Things Down?
 
 - When we add `@Transactional`, Spring:
-
   - Creates a **transactional proxy** around the bean
   - Opens a new database transaction (even for read operations)
   - Tracks entity state for changes (**Dirty Checking**)
@@ -49,7 +48,7 @@ public class UserService {
 
 - This overhead is unnecessary for **read-only queries**, and that’s why the execution time increased.
 
-### ➡️ The Fix – Use @Transactional(readOnly = true)
+##### 🟦 The Fix – Use @Transactional(readOnly = true)
 
 - Instead of creating a transaction with full overhead, we mark it as read-only:
 
@@ -70,7 +69,7 @@ public class UserService {
 
 ```
 
-### ➡️ Impact
+##### 🟦 Impact
 
 - Huge performance gain for read-heavy applications
 - If app serves **1M** `requests/day`, saving `~9.8ms` per **request = 2.7 hours of CPU time saved daily**
@@ -82,7 +81,6 @@ public class UserService {
 
 - The API was written using Java Streams everywhere for data processing.
   However, the implementation had inefficiencies, such as:
-
   - Long chained Stream operations (`map → filter → collect → stream again`)
   - Creating multiple intermediate collections unnecessarily
   - Using sequential streams for large datasets
@@ -90,7 +88,7 @@ public class UserService {
 
 - The code looked clean and modern, but it wasn’t optimized for high-traffic scenarios.
 
-### ➡️ Why Did This Slow Things Down?
+##### 🟦 Why Did This Slow Things Down?
 
 - `Collectors.toList()` overhead
   - Often creates a new modifiable list copy → more memory + extra time cost
@@ -101,12 +99,11 @@ public class UserService {
 - Sequential processing for heavy tasks
   - Only 1 thread utilized, leaving CPU cores idle, causing delay under high traffic
 - Streams used for simple logic
-
   - Streams add complexity and overhead compared to a simple loop which is faster in hot paths
 
 - **In short:** Streams introduce hidden CPU + memory overhead. During traffic spikes, these costs multiply, slowing down response time.
 
-### ➡️ The Fix and Impact
+##### 🟦 The Fix and Impact
 
 | Fix Implemented                                                              | Impact Achieved                                         |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------- |
@@ -115,7 +112,7 @@ public class UserService {
 | Used `parallelStream()` only for safe CPU-bound operations                   | Leveraged multi-core processing for faster results      |
 | 🔴 Switched from `Collectors.toList()` to `toUnmodifiableList()`             | Eliminated extra copying + improved immutability safety |
 
-### ➡️ Measured Outcome
+##### 🟦 Measured Outcome
 
 - ~30–35% faster API response time
 - Lower CPU and GC overhead
