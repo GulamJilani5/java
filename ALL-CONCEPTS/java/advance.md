@@ -20,7 +20,7 @@
 
 - ###### 🔵 CompletableFuture
 
-## ➡️ Virtual Thread
+- ###### 🔵 Virtual Thread
 
 #### 🟦 Interview Questions
 
