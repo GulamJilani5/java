@@ -112,22 +112,4 @@
 
 #### 🟦 Stream Coding Questions
 
-- ###### 🔵 You are given a list of employees, where each employee has a name, department, and salary.
-
-- ###### 🔵 Write two entity classes (Employee, Department) and a lambda to group employees by department with empty lists for unmatched departments
-
-- ###### 🔵 “Write a Java Stream API one-liner to remove duplicates, sort by string length (descending), take top 2 elements, and join them with a comma.”
-
-- ###### 🔵 How to group data using Collectors
-
-- ###### 🔵 How to handle optional and null values in stream pipelines
-
-- ###### 🔵 Yash Technology
-  - Input: AAABBACCDDBBA
-  - Output: A3B2A1C2D2B2A1
-  - Using Java Streams with grouping of consecutive characters.
-  - Find Answer `D:\Jilani\learning\dsa\src\streams\stream-codings\stream-coding.md`
-
-- ###### 🔵 Infosys
-  - Given a list of Employee(id, name, gender, department), find the department with the most female employees.
-    -Find Answer `D:\Jilani\learning\dsa\src\streams\stream-codings\stream-coding.md`
+- Find `https://github.com/GulamJilani5/dsa/tree/main/streams/stream-codings`
