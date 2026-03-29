@@ -2,6 +2,15 @@
 
 # ⏺️ Fundamental Concepts/Interview Questions
 
+## ➡️ Language Basics
+
+#### 🟦 Concepts
+
+#### 🟦 Interview questions
+
+- ##### 🔵 Java Basics, Immutability/String
+  - Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_1.md`
+
 ## ➡️ OOPs
 
 #### 🟦 Concepts
@@ -37,10 +46,6 @@
 - Find `java-basics/character`
 
 #### 🟦 Interview questions
-
-##### 🔵 Java Basics, Immutability/String
-
-- Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_1.md`
 
 ## ➡️ Exception Handling
 
