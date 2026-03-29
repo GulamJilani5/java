@@ -84,6 +84,6 @@ sleep(): Doesn't release the lock, just pauses the thread, defined in Thread cla
 
 ---
 
-#### 🟦 Coding Questions
+#### 🟦 SQL Query/Coding Coding Questions
 
 - Find `https://github.com/GulamJilani5/sql/tree/main/query/query/query-questions`
