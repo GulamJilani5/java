@@ -70,10 +70,9 @@
 
 #### 🟦 java 8
 
-###### 🔵 Concepts
-
-- Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8`
-- Find `D:\Jilani\learning\java-fundamentals\lambdaStream`
+- ###### 🔵 Concepts
+  - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8`
+  - Find `D:\Jilani\learning\java-fundamentals\lambdaStream`
 - Optional class
   - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8\optional-class.md`
 - Basic Concepts
@@ -84,26 +83,24 @@
 
 #### 🟦 java 17
 
-###### 🔵 Concepts
+- ###### 🔵 Concepts
+  - Find ``
 
-- Find ``
-
-###### 🔵 Interview Questions
+- ###### 🔵 Interview Questions
 
 #### 🟦 java 21
 
-###### 🔵 Concepts
+- ###### 🔵 Concepts
+  - Find ``
 
-- Find ``
-
-###### 🔵 Interview Questions
+- ###### 🔵 Interview Questions
 
 #### 🟦 java 25
 
-###### 🔵 Concepts
+- ###### 🔵 Concepts
 
 - Find ``
 
-###### 🔵 Interview Questions
+- ###### 🔵 Interview Questions
 
 - Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\core-java\core-java-questions_2.md`
