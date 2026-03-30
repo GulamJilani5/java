@@ -39,7 +39,7 @@
 
 - Find `javaVersions/java8/java-8-concepts.md`
 - Find `D:\Jilani\learning\java-fundamentals\lambdaStream\lambda_1.md`
-
+- Find `D:\Jilani\learning\java-fundamentals\lambdaStream\lambda_2.md`
 - ###### 🔵 Stream Creation / Stream Conversion
 
 - Find `https://github.com/GulamJilani5/dsa/tree/main/streams/stream-operations/stream-conversions`
@@ -82,10 +82,9 @@
 
 #### 🟦 Interview Questions
 
+- ###### 🔵 Interface vs Functional Interface vs Abstract class 🟥
 - ###### 🔵 The difference between Collections and Streams.
-
 - ###### 🔵 Can we modify the collection while iterating through a stream?
-
 - ###### 🔵 Difference between intermediate and terminal operations.
 
 - ###### 🔵 Stateless vs stateful intermediate operation in streams.
@@ -107,6 +106,7 @@
 - ###### 🔵 How to use Collectors for grouping, partitioning, and joining.
 
 - ###### 🔵 How to handle optional and null values in stream pipelines.
+  - Find `D:\Jilani\learning\java-fundamentals\javaVersions\java8\optional-class.md`
 
 ---
 

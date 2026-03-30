@@ -4,13 +4,11 @@
 
 ## ➡️ Spring Cloud / Microservices
 
-### 🟦 Concepts
-
 ##### 🔵 API Design
 
 - Find `https://github.com/GulamJilani5/system-design/tree/main/api`
 
-##### 🔵 Design Patter
+##### 🔵 Design Pattern
 
 - Find `https://github.com/GulamJilani5/system-design/tree/main/systemdesign/designpattern`
 
@@ -26,7 +24,3 @@
 
 - Factor Methodology, HLD & LLD
 - Find `https://github.com/GulamJilani5/system-design/tree/main/systemdesign/swdesignarchitecture`
-
-### 🟦 Interview
-
-- Find `D:\Jilani\learning\java-fundamentals\java-interview\interviews-questions\spring cloud`

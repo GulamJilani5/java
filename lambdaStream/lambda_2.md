@@ -11,7 +11,7 @@
 - No **constructor** (you cannot create object directly)
 - No instance variables (because interface fields are **static**)
   - All variables are by default: `public static final`
-- Can have **default**, **static**, **private** methods with body (Java 8+ private added in Java 9)
+- Can have **default**, **static**, **private** methods with body (Java 8+ private added in Java 9).
 
 #### 🟦 Key Features:
 
