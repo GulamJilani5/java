@@ -2,15 +2,15 @@
 
 ### Thread Basics
 
+- Thread LifeCycle
 - Thread vs Runnabel
 - Runnable vs Callable
 - Future vs Completablefuture
-- Thread LifeCycle
-- Thread Pool
+
+### ExecutorService
+
 - ThreadpoolExecutor vs fork/join
-
-### Executor Service
-
+- Thread Pool
 - Executor vs Executors
 
 ### Structured Concurrency(StructuredTaskScope)
