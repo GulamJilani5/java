@@ -1,15 +1,5 @@
 ️✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
 
-# ⏺️ Concurrency vs Multithreading
-
-Multithreading is one way to achieve concurrency, but concurrency is a broader idea that also includes multiprocessing and async execution.
-
-| **Aspect**     | **Concurrency**                         | **Multithreading**                          |
-| -------------- | --------------------------------------- | ------------------------------------------- |
-| Scope          | A concept about managing multiple tasks | One method of implementing concurrency      |
-| Parallelism    | Might be parallel or just interleaved   | Can be parallel if CPU has multiple cores   |
-| Implementation | Can use threads, processes, async, etc. | Always uses multiple threads in one process |
-
 ## ➡️ Issues in concurrency/Multithreading
 
 ### 🟦 Synchronization Problems (Thread Safety Issues)
