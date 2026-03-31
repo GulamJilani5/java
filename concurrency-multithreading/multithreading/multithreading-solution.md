@@ -4,9 +4,9 @@
 
 ## ➡️ Synchronization
 
+- 🔴Solves BOTH: **mutual exclusion (atomicity)** + **visibility**
 - Lock-based (uses intrinsic locks / monitors).
-- 🔴Provides both **mutual exclusion (atomicity)** + **visibility** guarantees
-- 🔴Only thread enters the block at a time.
+- 🔴Guarantees Only one thread enters(executes) the block(Critical section) at a time.
 - Method level (instance or static).
 - Block level (synchronized block within a method).
 - Cannot be applied at class level directly (but can synchronize static methods for class-level locks).
@@ -66,6 +66,7 @@ Thread safety ensures that shared data remains consistent across threads without
 
 #### 🟦 Volatile Keyword:
 
+- Solves Visibility Problem
 - Ensures 🔴**visibility** of variable changes across threads without guaranteeing atomicity.
 - Lock free
 - Used with variables(**eg.** 🔴 flags and state variables)

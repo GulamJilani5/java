@@ -2,19 +2,24 @@
 
 ## ➡️ Issues in concurrency/Multithreading
 
-### 🟦 Synchronization Problems (Thread Safety Issues)
+### 🟦 Thread Safety Issues
 
 ##### 🔵 Race Condition
 
-Happens when two or more threads try to access and modify the same data at the same time, and the final result depends on which thread wins the race.
+- Data corruption(wrong result)
+- Happens when two or more threads access and modify the same data concurrently, and the final result becomes unpredictable due to timing/interleaving.
+- Both threads execute the operation
+  - But due to timing:
+    - One result may overwrite the other
+    - Some updates may be lost
 
-- **Real-world analogy:** Two chefs are adding salt to the same soup without talking to each other — sometimes it’s perfect, sometimes way too salty.
-- **Fix/Solution:** Synchronization (synchronized, locks, AtomicInteger).
+- **Real-world analogy:** Two chefs add salt to the same soup at the same time without coordination — sometimes too much, sometimes correct, but never predictable.
+- **Fix/Solution:** Synchronization (synchronized, ReentrantLock, AtomicInteger).
 
 ##### 🔵 Visibility Problem
 
-Thread A changes a variable, but Thread B doesn’t see the change immediately because the value is cached in CPU core’s local memory/Cached Memory (not flushed to main memory yet).
-
+- Stale data
+- Thread A changes a variable, but Thread B doesn’t see the change immediately because the value is cached in CPU core’s local memory/Cached Memory (not flushed to main memory yet).
 - Thread B sees old data because it’s looking at its own local copy in CPU cache instead of the updated one in RAM.
 
 - **Real-world analogy:** Chef A updates the recipe on his clipboard but doesn’t tell Chef B — B keeps cooking using the old recipe.
@@ -24,7 +29,8 @@ Thread A changes a variable, but Thread B doesn’t see the change immediately b
 
 ##### 🔵 Deadlock
 
-Two or more threads are waiting on each other forever, so nothing moves forward.
+- stuck forever
+- Two or more threads are waiting on each other forever, so nothing moves forward.
 
 - **Real-world analogy:** Chef A has the salt and waits for the pepper from Chef B.
   Chef B has the pepper and waits for the salt from Chef A.
@@ -36,8 +42,18 @@ Two or more threads are waiting on each other forever, so nothing moves forward.
 
 ##### 🔵 Starvation
 
-Happens when multiple threads access shared mutable data at the same time without proper synchronization.
-Final outcome depends on the unpredictable thread scheduling.
-
-- **Real-world analogy:** Two chefs are adding salt to the same soup without talking to each other — sometimes it’s perfect, sometimes way too salty.
-- **Fix/Solution:** Synchronization (synchronized, locks, AtomicInteger).
+- no chance to run
+- A thread never gets CPU time or access to a resource because other threads keep taking it.
+  - One thread keeps waiting indefinitely(longer time)
+  - System is running, but that thread is ignored
+- Thread A releases lock
+  - Immediately Thread B grabs it
+  - Then Thread C
+  - Then B again
+    .....
+  - Thread D is always waiting and never gets a chance
+- **Real-world analogy:** One chef is always ready to cook, but other chefs keep taking the kitchen again and again, so he never gets a chance to cook.
+- **Fix/Solution:**
+  - Use fair locks (ReentrantLock(true))
+  - Avoid thread priority misuse
+  - Use proper scheduling / thread pools
