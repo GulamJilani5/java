@@ -31,12 +31,18 @@ class Counter {
 
 ```java
 class Counter {
-    private int count = 0;
-    public synchronized void increment() {
-        count++; // Thread-safe
+    private int count = 0;  // 👈 defined here
+
+    public void increment() {
+        // some non-critical code
+
+        synchronized (this) {
+            count++;  // 👈 using the field
+        }
+
+        // more non-critical code
     }
 }
-
 ```
 
 - Locks the entire object (instance methods) or class (static methods).
