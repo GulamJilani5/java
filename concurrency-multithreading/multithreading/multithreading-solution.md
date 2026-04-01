@@ -4,7 +4,9 @@
 
 ## ➡️ Synchronization
 
-- 🔴Solves BOTH: **mutual exclusion (atomicity)** + **visibility**
+- Problem it solves:
+  - Race Condition (Data corruption - multiple threads modifying shared data)
+  - 🔴Solves BOTH: **mutual exclusion (atomicity)** + **visibility**
 - Lock-based (uses intrinsic locks / monitors).
 - 🔴Guarantees Only one thread enters(executes) the block(Critical section) at a time.
 - Method level (instance or static).
@@ -66,7 +68,10 @@ Thread safety ensures that shared data remains consistent across threads without
 
 #### 🟦 Volatile Keyword:
 
-- Solves Visibility Problem
+- Problem it solves:
+  - Visibility issue (stale data)
+  - Forces read/write from main memory
+  - Prevents thread from using cached value
 - Ensures 🔴**visibility** of variable changes across threads without guaranteeing atomicity.
 - Lock free
 - Used with variables(**eg.** 🔴 flags and state variables)
@@ -83,8 +88,10 @@ class Shared {
 
 #### 🟦 Atomic Classes:
 
+- Problem it solves:
+  - Race condition on single variable
+  - Solves both visibility & atomicity for single variables.
 - 🔴Provides lock-free, thread-safe operations on single variables using low-level CPU instructions (e.g., Compare-and-Swap).
-- Provides both visibility & atomicity for single variables.
 - 🔴Variable level (eg. Counters, Accumulators)
 - Used with Wrappers not primitives(**e.g.** with Integer not int)
 - Faster than synchronized in most cases.
@@ -103,6 +110,8 @@ class Counter {
 
 #### 🟦 ReentrantLock:
 
+- Problem it solves:
+  - Same as synchronized BUT with more control
 - A flexible, explicit locking mechanism that provides more control than synchronized.
 
 ```java
