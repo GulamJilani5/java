@@ -27,11 +27,30 @@ A ThreadPoolExecutor manages a pool of threads to execute tasks (Runnable or Cal
 - **handler (RejectedExecutionHandler):** A policy for handling tasks when the executor cannot accept them (queue full and `maximumPoolSize` reached).
 
 ```java
-ThreadPoolExecutor(int corePoolSize,
-                  int maximumPoolSize,
-                  long keepAliveTime,
-                  TimeUnit unit,
-                  BlockingQueue<Runnable> workQueue,
-                  ThreadFactory threadFactory,
-                  RejectedExecutionHandler handler)
+import java.util.concurrent.*;
+
+public class CustomThreadPoolExample {
+    public static void main(String[] args) {
+
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                2,                         // core threads
+                4,                         // max threads
+                10,                        // keep alive time
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(2), // queue size
+                Executors.defaultThreadFactory(),
+                new ThreadPoolExecutor.CallerRunsPolicy()
+        );
+
+        for (int i = 1; i <= 10; i++) {
+            int task = i;
+            executor.execute(() -> {
+                System.out.println("Task " + task + " executed by " + Thread.currentThread().getName());
+                try { Thread.sleep(2000); } catch (Exception e) {}
+            });
+        }
+
+        executor.shutdown();
+    }
+}
 ```
