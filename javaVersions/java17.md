@@ -22,7 +22,7 @@
 - Helps in exhaustive pattern matching in switch expressions.
 - Encourages well-defined hierarchies, especially in domain models.
 
-##### How to explain in interview
+#### 🟦 How to explain in interview
 
 "In Java, a sealed class restricts which other classes can extend or implement it. For example, if I have a Shape class, I can seal it and permit only Circle, Rectangle, and Triangle to extend it. This gives me more control over my class hierarchy and helps avoid unwanted subclasses. Each permitted subclass must declare whether it’s final, sealed, or non-sealed. This is very useful when you want to design APIs or domain models with strict inheritance rules.”
 
