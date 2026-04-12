@@ -16,6 +16,9 @@
 - Exception Handling, memory management, java versions.
 - immutability, hashcode, equals(), ==
 - Access modifier, interface, functional interface and abstract class,
+- Internal working of the HashMap
+- Internal working of the HashSet
+- HashMap vs concurrentHashMap
 
 ### ➡️ Spring framework & Spring Boot (10%)
 
