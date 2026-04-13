@@ -2,6 +2,8 @@
 
 # ⏺️ Unchecked Exceptions (RuntimeException)
 
+- Programming mistakes
+
 ## ➡️ Types Of Checked Exception
 
 #### 🟦 Most Common (VERY IMPORTANT)

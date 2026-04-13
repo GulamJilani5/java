@@ -2,9 +2,10 @@
 
 # ⏺️ Checked Exception
 
+- External failures (I/O, DB, network)
 - Must be handled (`try-catch` or `throws`)
 - These are exceptions that the compiler forces you to handle (using **try-catch** or **throws** keyword).
-- They represent **recoverable conditions(recoverable issues)** that the program should anticipate and handle gracefully. Checked exceptions force robust error handling (Use checked exceptions for external failures like **files**, **DB**).
+- They represent **recoverable conditions(recoverable issues)** that the program should anticipate and handle gracefully.
 
 ## ➡️ Types Of Checked Exception
 
