@@ -16,10 +16,34 @@
 
 ### ➡️ ClassCastException
 
-### ➡️
+### ➡️ Java Exception Handling Questions
 
-### ➡️
+##### 🟦 Difference between Checked vs Unchecked Exceptions — and why Java supports both
 
-### ➡️
+##### 🟦 Why is RuntimeException not mandatory to handle? When should you create a custom RuntimeException?
 
-### ➡️
+##### 🟦 Can a finally block be skipped? Real-world scenarios
+
+##### 🟦 Difference between throw vs throws with use cases
+
+##### 🟦 What happens if an exception is thrown in finally? Which exception survives?
+
+##### 🟦 Why is exception handling expensive? How to optimize for high-performance systems
+
+##### 🟦 How does exception propagation work internally in the JVM?
+
+##### 🟦 Difference between Error vs Exception — why catching Error is dangerous
+
+##### 🟦 What is exception chaining and why it’s critical in microservices & debugging
+
+##### 🟦 How to design global exception handling in Spring Boot (real project approach)
+
+##### 🟦 Why exceptions should never be used for normal flow control
+
+##### 🟦 try-with-resources vs finally — which is safer and why?
+
+##### 🟦 How to separate business exceptions vs technical exceptions in enterprise apps
+
+##### 🟦 Multiple catch blocks — ordering rules & pitfalls
+
+##### 🟦 Exception handling in async code (CompletableFuture, threads, executors)
