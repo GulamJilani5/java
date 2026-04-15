@@ -1,38 +1,46 @@
 ✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
 
-# ⏺️ Exception concepts
+# ⏺️ Java Exception concepts/Questions
 
 ## ➡️ 1. What are checked and unchecked exceptions? Give examples.
 
-- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
+##### 🟦 Difference between Checked vs Unchecked Exceptions — and why Java supports both
 
-## ➡️ 2. stacoverflow error vs outOfMemoryError
+##### 🟦 Difference between Error vs Exception — why catching Error is dangerous
 
-- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
+- Find `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
+
+## ➡️ 2. stacoverflowerror vs outOfMemoryError
+
+- Find `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
 
 ## ➡️ 3. ClassNotFoundException vs NoClassDefFoundError
 
-- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
+- Find `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
 
 ### ➡️ ClassCastException
 
-### ➡️ Java Exception Handling Questions
-
-##### 🟦 Difference between Checked vs Unchecked Exceptions — and why Java supports both
-
-##### 🟦 Why is RuntimeException not mandatory to handle? When should you create a custom RuntimeException?
+### ➡️ What is final, finally and finalize()
 
 ##### 🟦 Can a finally block be skipped? Real-world scenarios
 
-##### 🟦 Difference between throw vs throws with use cases
+##### 🟦 try-with-resources vs finally — which is safer and why?
 
 ##### 🟦 What happens if an exception is thrown in finally? Which exception survives?
+
+### ⏺️ Java Exception Handling Questions
+
+##### 🟦 Difference between throw vs throws with use cases
+
+- Find `D:\Jilani\learning\java-fundamentals\java-basics\exceptions\exceotion_2.md`
+
+##### 🟦 Why is RuntimeException not mandatory to handle? When should you create a custom RuntimeException?
+
+##### 🟦 Multiple catch blocks — ordering rules & pitfalls
 
 ##### 🟦 Why is exception handling expensive? How to optimize for high-performance systems
 
 ##### 🟦 How does exception propagation work internally in the JVM?
-
-##### 🟦 Difference between Error vs Exception — why catching Error is dangerous
 
 ##### 🟦 What is exception chaining and why it’s critical in microservices & debugging
 
@@ -40,10 +48,6 @@
 
 ##### 🟦 Why exceptions should never be used for normal flow control
 
-##### 🟦 try-with-resources vs finally — which is safer and why?
-
 ##### 🟦 How to separate business exceptions vs technical exceptions in enterprise apps
-
-##### 🟦 Multiple catch blocks — ordering rules & pitfalls
 
 ##### 🟦 Exception handling in async code (CompletableFuture, threads, executors)

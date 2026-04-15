@@ -109,7 +109,7 @@ public static void main(String[] args) {
 
 MissingClass obj = new MissingClass(); // Compiles fine if MissingClass.class exists at compile time
 
-// But throws NoClass DefFoundError at runtime if .class is deleted
+// But throws NoClassDefFoundError at runtime if .class is deleted
 
 }
 ```
