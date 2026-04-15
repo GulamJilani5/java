@@ -26,7 +26,11 @@
 
 ##### 🟦 Can a finally block be skipped? Real-world scenarios
 
+- Find `D:\Jilani\learning\java-fundamentals\java-basics\exceptions\exceotion_2.md`
+
 ##### 🟦 try-with-resources vs finally — which is safer and why?
+
+- Find `D:\Jilani\learning\java-fundamentals\java-basics\exceptions\exceotion_2.md`
 
 ##### 🟦 What happens if an exception is thrown in finally? Which exception survives?
 
