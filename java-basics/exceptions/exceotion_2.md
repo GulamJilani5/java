@@ -102,7 +102,21 @@ try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
 }
 ```
 
-- Problem with finally
+##### 🟦 What happens if an exception is thrown in finally?
+
+- The exception from finally block survives
+- The original exception (from try or catch) is lost / suppressed
+
+```java
+try {
+    throw new RuntimeException("Exception in try");
+} finally {
+    throw new RuntimeException("Exception in finally");
+}
+```
+
+- Output
+  - `Exception in thread "main" java.lang.RuntimeException: Exception in finally`
 
 ```java
 BufferedReader br = null;
