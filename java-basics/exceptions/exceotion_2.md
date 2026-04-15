@@ -76,3 +76,47 @@ protected void finalize() throws Throwable {
     // cleanup code
 }
 ```
+
+### ➡️ try-with-resources vs finally
+
+##### 🟦 try-with-resources is safer than finally
+
+- try-with-resources is safer because it automatically closes resources and prevents resource leaks while correctly handling suppressed exceptions
+- Automatic resource management
+  - Resources (like DB connections, files, streams) are automatically closed
+- No chance of forgetting to close them
+- No resource leak risk
+- Even if an exception occurs → resource still closes properly
+- Handles multiple exceptions correctly
+  - If:
+    - exception occurs in try
+    - AND another exception occurs during close()
+    - Java preserves the original exception and marks others as suppressed
+    - (With finally, original exception can get lost)
+- Cleaner & less error-prone code
+  - No manual closing needed
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+    return br.readLine();
+}
+```
+
+- Problem with finally
+
+```java
+BufferedReader br = null;
+try {
+    br = new BufferedReader(new FileReader("file.txt"));
+    return br.readLine();
+} finally {
+    if (br != null) {
+        br.close(); // ❗ can throw exception
+    }
+}
+```
+
+- Issues:
+  - You might forget to close resource
+  - `close()` can throw exception and override original exception
+  - More boilerplate code

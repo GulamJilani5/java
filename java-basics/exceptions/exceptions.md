@@ -22,6 +22,8 @@
 
 ### ➡️ What is final, finally and finalize()
 
+- Find `D:\Jilani\learning\java-fundamentals\java-basics\exceptions\exceotion_2.md`
+
 ##### 🟦 Can a finally block be skipped? Real-world scenarios
 
 ##### 🟦 try-with-resources vs finally — which is safer and why?
