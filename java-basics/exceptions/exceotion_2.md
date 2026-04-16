@@ -130,7 +130,7 @@ try {
 }
 ```
 
-- Issues:
+- **Issues:**
   - You might forget to close resource
   - `close()` can throw exception and override original exception
   - More boilerplate code
