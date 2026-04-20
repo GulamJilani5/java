@@ -55,10 +55,6 @@
 
 #### 🟦 Interview questions
 
-- ###### 🔵
-- ###### 🔵
-  🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
-
 # ⏺️ JPA / Hibernate
 
 - ###### 🔵 JDBC vs JPA/Hibernate
@@ -107,6 +103,25 @@
 - ###### 🔵 Explain difference between entity graphs and fetch joins for optimizing queries.
 
 - Find `D:\Jilani\learning\spring boot\spring-framework\jpahibernate\hibernate\hibernate_3.md`
+- ###### 🔵 Application is slow due to JPA - how do you improve performance?
+
+- Use DTO Projection
+
+- Solve N+1 Query Problem
+
+- Use LAZY Loading Properly
+
+- Add Indexes in Database
+
+- Pagination (Very Important)
+
+- Use Caching (1st & 2nd Level)
+
+- Avoid Unnecessary save() Calls
+
+- Use Bulk Updates Instead of Loop
+
+- Optimize Transactions
 
 - ###### 🔵 Difference between Criteria API and JPQL.
 
@@ -121,7 +136,7 @@
 - ###### 🔵 What is @Transactiona, Explain difference between REQUIRED and REQUIRES_NEW
 
 - Find `D:\Jilani\learning\spring boot\spring-framework\jpahibernate\jpa\orm-jpa_3.md`
-
+- ###### 🔵 What are Propagation & Isolation levels in transaction management?
 - ###### 🔵 What is Dirty Checking, How Hibernate Dirty Checking Works Internally (Under the Hood).
 
 - Find `D:\Jilani\learning\spring boot\spring-framework\jpahibernate\hibernate\hibernate_5.md`
