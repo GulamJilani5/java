@@ -2,7 +2,7 @@
 
 # ⏺️ Production Scenario(Real Issue Faced)
 
-### ➡️ Core Production Scenarios (1–15)
+### ➡️ Core Production Scenarios
 
 ##### 🟦 Your Spring Boot service CPU suddenly spikes to 90% in production. How will you investigate and fix it?
 
