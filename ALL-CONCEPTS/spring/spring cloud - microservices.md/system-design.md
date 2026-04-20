@@ -1,26 +1,32 @@
 ⏺️ ➡️ 🟦 🔵 🟢 🔴 ⭕ 🟠 🟣 🟥 🟧 ✔️ ☑️ • ‣ → ⁕
 
-# ⏺️
+# ⏺️ Spring Cloud / Microservices
 
-## ➡️ Spring Cloud / Microservices
-
-##### 🔵 API Design
+### ➡️ API Design
 
 - Find `https://github.com/GulamJilani5/system-design/tree/main/api`
 
-##### 🔵 Design Pattern
+### ➡️ Design Pattern
 
 - Find `https://github.com/GulamJilani5/system-design/tree/main/systemdesign/designpattern`
 
-##### 🔵 Design Principle
+##### 🟦 What is Singletone pattern, explain it
+
+##### 🟦 What is Factory method
+
+##### 🟦 What is observer pattern
+
+### ➡️ Design Principle
 
 - Find `https://github.com/GulamJilani5/system-design/tree/main/systemdesign/designprinciple`
 
-##### 🔵 Types Of System
+##### 🟦 Explain SOLID Prinicple
+
+### ➡️ Types Of System
 
 - Find `https://github.com/GulamJilani5/system-design/tree/main/typeofsystems`
 
-##### 🔵 Software Design Architecture
+### ➡️ Software Design Architecture
 
 - Factor Methodology, HLD & LLD
 - Find `https://github.com/GulamJilani5/system-design/tree/main/systemdesign/swdesignarchitecture`

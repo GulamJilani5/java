@@ -23,9 +23,9 @@
 ### ➡️ Spring framework & Spring Boot (10%)
 
 - IOC/DI, Dispatcher Servlet
+- Spring boot flow(lifecylce), @SpringBootApplication
 - @Configuration & @Bean
 - @Qualifier, @Primary
-- Spring boot flow(lifecylce), @SpringBootApplication
 - Spring Data JPA
 - Spring AOP, Spring Testing & Spring Exception Handling
 - Swagger, Profile & Actuator

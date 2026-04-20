@@ -44,18 +44,9 @@
 
 - ###### 🔵 How do you implement role-based access control (RBAC)? @PreAuthorize vs @Secured vs manual checking.
 
-## ➡️ Spring Boot Hibernate/JPA
+### ➡️ JPA / Hibernate
 
 - Find `https://github.com/GulamJilani5/springboot/tree/main/spring-framework/jpahibernate`
-
-#### 🟦 Concepts
-
-- ###### 🔵
-- ###### 🔵
-
-#### 🟦 Interview questions
-
-# ⏺️ JPA / Hibernate
 
 - ###### 🔵 JDBC vs JPA/Hibernate
 
@@ -99,12 +90,13 @@
 - ###### 🔵 What is N+1 Problem and how to prevent it.
 
 - Find `D:\Jilani\learning\spring boot\spring-framework\jpahibernate\hibernate\hibernate_3.md`
-
+- DTO Projection in JPA
 - ###### 🔵 Explain difference between entity graphs and fetch joins for optimizing queries.
 
 - Find `D:\Jilani\learning\spring boot\spring-framework\jpahibernate\hibernate\hibernate_3.md`
-- ###### 🔵 Application is slow due to JPA - how do you improve performance?
 
+- ###### 🔵 Application is slow due to JPA - how do you improve performance?
+- Find ``
 - Use DTO Projection
 
 - Solve N+1 Query Problem

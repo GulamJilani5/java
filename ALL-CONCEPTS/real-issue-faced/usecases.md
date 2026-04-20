@@ -4,7 +4,7 @@
 
 ### ➡️ Problem
 
-“We faced a performance issue in our Spring Boot application where a simple read query was taking around `10ms` to execute. The surprising part was that there was no heavy logic—just a basic findById() query using a custom `@Query.`”
+“We faced a performance issue in our Spring Boot application where a simple read query was taking around `10ms` to execute. The surprising part was that there was no heavy logic—just a basic `findById()` query using a custom `@Query.`”
 
 - **Repository**
 
