@@ -1,190 +1,91 @@
-⏺️ ➡️ 🟦 🔵 ✔️ 🟣 🟢 🔴 🟡 🟠 ➡️ ⭕ 🟠 ⬛ 🟩 🟪 🟫 ••‣⁎⁕⁜※⁂
-⏺️ ExecutorService & Executors
+✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ⏺️ ••‣⁎⁕⁜※⁂
 
-## ➡️ ExecutorService
+# ⏺️ Executor Framework
 
-- It is an interface for managing and executing tasks asynchronously
-- Methods
+- By default, `CompletableFuture.supplyAsync()` uses ForkJoinPool common pool.
+- **ForkJoinPool** is mainly optimized for CPU-intensive, non-blocking tasks.
+- API/DB calls are blocking operations, so threads stay occupied waiting for response, which can exhaust the common pool.
+- Using a custom **ExecutorService** provides a separate dedicated thread pool for these blocking tasks.
+- This gives better isolation, scalability, and control in backend applications like Spring Boot microservices.
 
-```java
-submit()
-execute()
-shutdown()
-invokeAll()
-```
+### ➡️ Executor Framework Hierarchy
 
-```java
-ExecutorService executor = Executors.newFixedThreadPool(10);
+Executor (`interface`)
+└──── ExecutorService (`interface`)
+├──── ThreadPoolExecutor (`class`)
+│ ├────────── SingleThreadExecutor (`via Executors, wrapped ThreadPoolExecutor`)
+│ ├────────── CachedThreadPool (`via Executors, direct ThreadPoolExecutor`)
+│ ├────────── FixedThreadPool (`via Executors, direct ThreadPoolExecutor`)
+│ └────────── ScheduledThreadPoolExecutor (`extends ThreadPoolExecutor`)
+│ └────────────────── ScheduledExecutorService (`interface, implemented by ScheduledThreadPoolExecutor`)
+└──── ForkJoinPool (`class`)
+└──────────── WorkStealingPool (`via Executors`)
 
-executor.submit(() -> {
-    System.out.println("Running task in thread: " + Thread.currentThread());
-});
-```
+### ➡️ Is Executor Framework Preferred?
 
-## ➡️ Executors Class (Utility Class)
+- **Executor Framework** is Pure Java(**Core Java / JDK level**) concurrency utility (since **Java 5**, `java.util.concurrent`).
+- Yes Preferred — but usually through Spring abstractions (`TaskExecutor`, `@Async`, `TaskScheduler`) instead of raw
+  `Executors.newFixedThreadPool()` etc. Spring manages the lifecycle of the thread pool for you.
+- `Executors` (via Spring’s `TaskExecutor`) are still used internally for things like background jobs, scheduling,
+  or CPU-heavy tasks in Spring boot.
+  - But for inter-service communication (calling another microservice), we prefer `WebClient` over a thread-blocking
+    `RestTemplate/Executor` model.
 
-- `java.util.concurrent.Executors`
-- Executors → gives ExecutorService → backed by real pools
-- Executors uses ThreadPoolExecutor internally
-- Executors.newFixedThreadPool() → internally creates → ThreadPoolExecutor
+### ➡️ Core Interfaces
 
-### 🟦 Factory Methods
+- Executor
+- ExecutorService
+- ScheduledExecutorService
+  - Extends `ThreadPoolExecutor` for `ScheduledExecutorService`.
 
-#### 🔵 SingleThreadExecutor
+### ➡️ Two ways to create Custom Thread Pool
 
-- Uses one thread to run tasks one at a time, in order.
-- **Good for:** Sequential tasks, like processing a queue of events.
-- **Example:**
+- **Executors** is basically a convenience wrapper around **ThreadPoolExecutor**.
 
-```java
-import java.util.concurrent.*;
+##### 🟦 Executors Utility Class
 
-public class SingleThreadExample {
-    public static void main(String[] args) {
-        ExecutorService executor = Executors.newSingleThreadExecutor();
+- SingleThreadExecutor,
+- CachedThreadPool
+- FixedThreadPool
+- ScheduledExecutorService
+- WorkStealingPool
 
-        executor.submit(() -> System.out.println("Task 1"));
-        executor.submit(() -> System.out.println("Task 2"));
-        executor.submit(() -> System.out.println("Task 3"));
-
-        executor.shutdown();
-    }
-}
-```
-
-- Output (always in order):
-  - Task 1
-  - Task 2
-  - Task 3
-
-#### 🔵 FixedThreadPool
-
-- A pool with a fixed number of threads (e.g., 3 threads).
-- If all threads are busy, new tasks wait in a queue.
-- **Good for:** Applications with a steady number of tasks, like a web server handling client requests.
-- **Example:**
+##### 🟦 ThreadPoolExecutor
 
 ```java
-import java.util.concurrent.*;
-
-public class FixedThreadPoolExample {
-    public static void main(String[] args) {
-        ExecutorService executor = Executors.newFixedThreadPool(2);
-
-        for (int i = 1; i <= 5; i++) {
-            int task = i;
-            executor.submit(() -> {
-                System.out.println("Task " + task + " executed by " + Thread.currentThread().getName());
-            });
-        }
-
-        executor.shutdown();
-    }
-}
+   ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                2,                         // core threads
+                4,                         // max threads
+                10,                        // keep alive time
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(2), // queue size
+                Executors.defaultThreadFactory(),
+                new ThreadPoolExecutor.CallerRunsPolicy()
+      );
 ```
 
-- Behavior:
-  - Only 2 threads run at a time
-  - बाकी tasks queue में wait करते हैं
+## ➡️ What problem does Executor Framework Resolve
 
-#### 🔵 CachedThreadPool
+#### 🟦 Avoids Thread Creation Overhead:
 
-- Creates new threads as needed and reuses idle ones. Idle threads are removed after 60 seconds.
-- **Good for:** Short, unpredictable tasks, like handling sudden bursts of user requests.
-- **Example:**
+- Creating a new thread for each task is slow and uses a lot of memory. **ExecutorService** reuses threads from a pool.
 
-```java
-import java.util.concurrent.*;
+#### 🟦 Simplifies Thread Management:
 
-public class CachedThreadPoolExample {
-    public static void main(String[] args) {
-        ExecutorService executor = Executors.newCachedThreadPool();
+- You don’t need to manually start, stop, or track threads.
 
-        for (int i = 1; i <= 5; i++) {
-            int task = i;
-            executor.submit(() -> {
-                System.out.println("Task " + task + " executed by " + Thread.currentThread().getName());
-            });
-        }
+#### 🟦 Handles Task Queuing:
 
-        executor.shutdown();
-    }
-}
-```
+- If there are more tasks than threads, ExecutorService queues them and processes them when a thread is free.
 
-- Behavior:
-  - Threads dynamically create होते हैं
-  - Idle threads reuse होते हैं
+#### 🟦 Supports Task Results:
 
-#### 🔵 ScheduledThreadPool
+Unlike basic threads, ExecutorService can run tasks that return results (using Callable).
 
-- Runs tasks after a delay or at regular intervals (like a timer/Periodic Tasks).
-- **Good for:** Periodic tasks, like checking for updates every 5 seconds.
+#### 🟦 Prevents Resource Overload:
 
-```java
-import java.util.concurrent.*;
+Limits the number of threads to avoid crashing your program.
 
-public class ScheduledThreadPoolExample {
-    public static void main(String[] args) {
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(2);
+#### 🟦 Enables Asynchronous Execution:
 
-        // Run after 3 seconds delay
-        scheduler.schedule(() -> {
-            System.out.println("Executed after 3 seconds");
-        }, 3, TimeUnit.SECONDS);
-
-        // Run every 2 seconds
-        scheduler.scheduleAtFixedRate(() -> {
-            System.out.println("Running periodically: " + System.currentTimeMillis());
-        }, 0, 2, TimeUnit.SECONDS);
-    }
-}
-```
-
-- Use cases:
-  - Cron jobs
-  - Polling APIs
-  - Background monitoring
-
-#### 🔵 WorkStealingPool
-
-- Java 8+.
-- Uses multiple threads (based on CPU cores) where idle threads “steal” tasks from busy ones.
-- **Good for:** Tasks that split into smaller subtasks, like parallel processing.
-- **Example:**
-
-```java
-import java.util.concurrent.*;
-
-public class WorkStealingPoolExample {
-    public static void main(String[] args) {
-        ExecutorService executor = Executors.newWorkStealingPool();
-
-        for (int i = 1; i <= 10; i++) {
-            int task = i;
-            executor.submit(() -> {
-                System.out.println("Task " + task + " executed by " + Thread.currentThread().getName());
-            });
-        }
-
-        // No need to shutdown immediately (ForkJoinPool handles lifecycle differently)
-    }
-}
-```
-
-- Behavior:
-  - Uses ForkJoinPool internally
-  - Idle threads steal tasks → better CPU utilization
-
-## ➡️ ThreadPoolExecutor
-
-- Find `D:\Jilani\learning\java-fundamentals\concurrency-multithreading\executor-framework\threadpoolexceutor.md`
-- The core class for `SingleThreadExecutor`, `CachedThreadPool`, and `FixedThreadPool`.
-
-## ➡️ ForkJoinPool:
-
-- Used for `WorkStealingPool`, separate from `ThreadPoolExecutor`.
-
-## ➡️ ScheduledThreadPoolExecutor:
-
-Extends `ThreadPoolExecutor` for `ScheduledExecutorService`.
+Tasks run in the background, so your main program doesn’t wait.
