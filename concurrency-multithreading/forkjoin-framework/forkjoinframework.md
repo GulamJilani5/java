@@ -6,7 +6,7 @@
 - The Fork/Join framework is a concurrency utility in Java.
 - It is designed specifically for parallel processing of divide-and-conquer algorithms, this design leverage multiple processors/cores efficiently — unlike normal threads, it uses a special `work-stealing algorithm` to maximize CPU usage.
 - It's optimized for workloads where a large task can be recursively broken down ("forked") into smaller subtasks, which are then solved in parallel and combined ("joined") to produce the final result. This makes it ideal for CPU-intensive tasks like sorting, searching, or matrix computations, where you have many small, independent subtasks.
-- Unlike general-purpose thread pools (e.g., `ThreadPoolExecutor`), **Fork/Join** uses a **work-stealing scheduler** to minimize idle time: idle worker threads "steal" tasks from busy threads' queues, improving efficiency on multi-core systems.
+- Unlike general-purpose thread pools (e.g., `ThreadPoolExecutor`), **Fork/Join** uses a **work-stealing scheduler** to minimize idle time: idle worker threads "steal" tasks from busy threads' queues, improving efficiency on multi-core systems.🔴
 
 ## ➡️ Key Components
 
