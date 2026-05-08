@@ -1,15 +1,16 @@
 ⏺️ ➡️ 🟦 🔵 🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-## ➡️ Executors Class (Utility Class)
+# ⏺️ Executors Class (Utility Class)
 
 - `java.util.concurrent.Executors`
-- Executors → gives ExecutorService → backed by real pools
-- Executors uses ThreadPoolExecutor internally
-- Executors.newFixedThreadPool() → internally creates → ThreadPoolExecutor
+- **Executors** → gives **ExecutorService** → backed by real pools
+- **Executors** uses **ThreadPoolExecutor** internally
+- - **Executors** is basically a convenience wrapper around **ThreadPoolExecutor**.
+- `Executors.newFixedThreadPool()` → internally creates → **ThreadPoolExecutor**
 
-### 🟦 Factory Methods
+### ➡️ Factory Methods
 
-#### 🔵 SingleThreadExecutor
+##### 🟦 SingleThreadExecutor
 
 - Uses one thread to run tasks one at a time, in order.
 - **Good for:** Sequential tasks, like processing a queue of events.
@@ -36,7 +37,7 @@ public class SingleThreadExample {
   - Task 2
   - Task 3
 
-#### 🔵 FixedThreadPool
+##### 🟦 FixedThreadPool
 
 - A pool with a fixed number of threads (e.g., 3 threads).
 - If all threads are busy, new tasks wait in a queue.
@@ -66,7 +67,7 @@ public class FixedThreadPoolExample {
   - Only 2 threads run at a time
   - बाकी tasks queue में wait करते हैं
 
-#### 🔵 CachedThreadPool
+##### 🟦 CachedThreadPool
 
 - Creates new threads as needed and reuses idle ones. Idle threads are removed after 60 seconds.
 - **Good for:** Short, unpredictable tasks, like handling sudden bursts of user requests.
@@ -95,7 +96,7 @@ public class CachedThreadPoolExample {
   - Threads dynamically create होते हैं
   - Idle threads reuse होते हैं
 
-#### 🔵 ScheduledThreadPool
+##### 🟦 ScheduledThreadPool
 
 - Runs tasks after a delay or at regular intervals (like a timer/Periodic Tasks).
 - **Good for:** Periodic tasks, like checking for updates every 5 seconds.
@@ -125,7 +126,7 @@ public class ScheduledThreadPoolExample {
   - Polling APIs
   - Background monitoring
 
-#### 🔵 WorkStealingPool
+##### 🟦 WorkStealingPool
 
 - Java 8+.
 - Uses multiple threads (based on CPU cores) where idle threads “steal” tasks from busy ones.
