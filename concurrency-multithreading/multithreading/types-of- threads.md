@@ -15,6 +15,19 @@ Custom ExecutorService
     Your dedicated isolated worker pool
 ```
 
+#### 🟦 If having Machine/Server/EC2 Instance
+
+```text
+Machine:
+5 CPU cores
+16 GB RAM
+```
+
+- All kinds of Java threads ultimately compete for the SAME these 5 machine CPU cores.
+- Those which don't get cpu will wait in the OS Waiting Queue.
+- **OS Scheduler decides:**
+  - Which thread runs, For how long and On which core
+
 ### ➡️ Scenario 1 — Pure Synchronous (Real External API Call)
 
 ##### 🟦 Service Class calling external Service
