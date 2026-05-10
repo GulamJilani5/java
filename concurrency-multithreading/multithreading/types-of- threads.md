@@ -24,7 +24,7 @@ Machine:
 ```
 
 - All kinds of Java threads ultimately compete for the SAME these 5 machine CPU cores.
-- Those which don't get cpu will wait in the OS Waiting Queue.
+- Those which don't get cpu core will wait in the OS Waiting Queue.
 - **OS Scheduler decides:**
   - Which thread runs, For how long and On which core
 
