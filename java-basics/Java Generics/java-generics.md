@@ -20,13 +20,14 @@
 ### ➡️ Type Parameters
 
 - These occur when declaring a generic class or generic method.
+  - just for understanding
 
 ```java
 <T>
 <S extends T>
 ```
 
-##### 🟦 Gneric Class
+##### 🟦 Generic Class
 
 ```java
 class Box<T>
